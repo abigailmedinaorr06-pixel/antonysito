@@ -1,2 +1,164 @@
 # antonysito
 te amo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Antony 💚</title>
+    <style>
+        :root {
+            --rosa-pastel: #ffdae9;
+            --lila-pastel: #e0dbff;
+            --azul-pastel: #d4f1f9;
+            --verde-loki: #c8e6c9;
+            --texto: #5d4037;
+        }
+
+        body {
+            background-color: var(--rosa-pastel);
+            font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--texto);
+        }
+
+        /* Lluvia de Loki-Corazones */
+        .loki-corazon {
+            position: fixed;
+            top: -10%;
+            z-index: 1000;
+            user-select: none;
+            animation: caer linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loki-corazon::before {
+            content: '💗'; /* El corazón de fondo */
+            font-size: 45px;
+            position: absolute;
+            color: #ffb7d5;
+        }
+
+        .loki-corazon::after {
+            content: '🤴'; /* Representación de Loki (puedes imaginar su carita aquí) */
+            font-size: 20px;
+            position: relative;
+            top: -2px;
+        }
+
+        @keyframes caer {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        .seccion {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 3px solid white;
+        }
+
+        h1, h2 { color: #d81b60; margin-bottom: 15px; }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-top: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .loki-img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 20px;
+            margin: 15px 0;
+            border: 5px solid var(--verde-loki);
+        }
+
+        .firma {
+            font-size: 1.4rem;
+            color: #ad1457;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function crearLokiCorazon() {
+            const div = document.createElement('div');
+            div.classList.add('loki-corazon');
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.animationDuration = Math.random() * 3 + 3 + 's';
+            div.style.opacity = Math.random() * 0.7 + 0.3;
+            // Un toque de tamaño aleatorio
+            const escala = Math.random() * 0.5 + 0.8;
+            div.style.transform = `scale(${escala})`;
+            
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 6000);
+        }
+        setInterval(crearLokiCorazon, 400);
+    </script>
+
+    <div class="contenedor">
+        
+        <section class="seccion" style="border-color: var(--rosa-pastel);">
+            <h1>¿Qué día querés ser mi San Valentín? 🌹</h1>
+        </section>
+
+        <section class="seccion" style="background-color: var(--lila-pastel);">
+            <h2>Nuestra canción ✨</h2>
+            <p><strong>Iris</strong> - The Goo Goo Dolls</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NdYWuo9OqwY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="seccion" style="background-color: var(--azul-pastel);">
+            <h2>Te amo y amo lo que te gusta ❤️</h2>
+            <p><strong>Alma Dinamita</strong> - Wos</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Xp9vXpE-1iU" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="seccion" style="border-color: var(--verde-loki);">
+            <h2>Te amo Antony !</h2>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZkbmZidm90ZzVqbmZidm90ZzVqbmZidm90ZzVqbmZidm90ZzVqJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/vE6mDAsasI7iW3X10T/giphy.gif" alt="Loki" class="loki-img">
+            <p>Sos mi variante favorita en todo el multiverso. ✨</p>
+            <div class="firma">— Abi :3</div>
+        </section>
+
+    </div>
+
+    <footer style="padding-bottom: 30px; color: #ad1457; font-size: 0.9rem;">
+        Hecho  para el mejor novio 
+    </footer>
+
+</body>
+</html>
